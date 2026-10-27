@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OVRA Vela 2</title>
+<meta name="description" content="OVRA Vela 2, a daily road trainer on a full-length PEBA midsole. Turn it in 3D, take it apart, pick your colorway.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top">OVRA</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a class="l" href="#anatomy">Anatomy</a></li>
+        <li><a class="l" href="#lineup">Lineup</a></li>
+        <li><a class="l" href="#fit">Fit</a></li>
+      </ul>
+    </nav>
+    <button class="bag" id="bagBtn" type="button" aria-controls="drawer" aria-expanded="false">Bag <span class="count" id="bagCount">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Road running · Daily trainer</p>
+      <h1>Vela&nbsp;2</h1>
+      <p class="lede">A daily trainer on a full-length PEBA midsole. Soft on the easy 5 a.m. loop, stable at kilometre 30.</p>
+      <dl class="quick">
+        <div><dt>Weight</dt><dd>248 g</dd></div>
+        <div><dt>Drop</dt><dd>8 mm</dd></div>
+        <div><dt>Stack</dt><dd>38/30 mm</dd></div>
+      </dl>
+      <div>
+        <div class="group-label"><b>Colorway</b><span id="cwName">Cobalt</span></div>
+        <div class="swatches" id="swatches" role="group" aria-label="Colorway"></div>
+      </div>
+      <div>
+        <div class="group-label"><b>Size (EU)</b><a href="#fit">Size chart</a></div>
+        <div class="sizes" id="sizes" role="group" aria-label="Size"></div>
+        <p class="size-msg" id="sizeMsg" aria-live="polite"></p>
+      </div>
+      <div class="buy">
+        <span class="price">€160</span>
+        <button class="cta" id="addBtn" type="button">Add to bag</button>
+      </div>
+      <p class="perks">Free shipping over €150 · 60-day run-in returns</p>
+    </div>
+    <div class="stage">
+      <div class="ghost" aria-hidden="true">VELA</div>
+      <canvas id="heroCanvas" tabindex="0" aria-label="3D model of the Vela 2. Drag or use the arrow keys to turn it."></canvas>
+      <span class="tag">MODEL VL-02<br>US M9 · 248 g</span>
+      <span class="hint">Drag to turn · ← → keys</span>
+    </div>
+  </section>
+
+  <section class="wrap anatomy" id="anatomy">
+    <div class="stage">
+      <div class="stage-label" id="stageLabel"><b>Assembled</b></div>
+      <canvas id="storyCanvas" aria-label="3D model showing the Vela 2 split into its upper, midsole and outsole"></canvas>
+      <ol class="pips" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+    </div>
+    <div class="steps">
+      <article class="step on" data-step="0">
+        <p class="eyebrow">Anatomy</p>
+        <h2>Three layers between you and the road</h2>
+        <p>Scroll to take the Vela 2 apart. Each layer does one job, tuned for the 1,400 or so footstrikes in an average 10 km run.</p>
+      </article>
+      <article class="step" data-step="1">
+        <span class="layer-no">Layer 1 of 3 · Upper</span>
+        <h3>Engineered mono-knit</h3>
+        <p>The knit is tighter across the midfoot for lockdown and opens up over the toes for airflow. A gusseted tongue stays centred on long runs, and the padded collar sits low to clear the Achilles.</p>
+        <ul class="chips"><li>Upper 62 g</li><li>78% recycled polyester</li><li>Gusseted tongue</li></ul>
+      </article>
+      <article class="step" data-step="2">
+        <span class="layer-no">Layer 2 of 3 · Midsole</span>
+        <h3>PEBA-blend foam</h3>
+        <p>A full-length slab of supercritical foam, 38 mm at the heel and 30 mm at the forefoot. In lab testing it returns 84% of impact energy and keeps that feel past 600 km.</p>
+        <ul class="chips"><li>Stack 38 / 30 mm</li><li>Drop 8 mm</li><li>Energy return 84%</li></ul>
+      </article>
+      <article class="step" data-step="3">
+        <span class="layer-no">Layer 3 of 3 · Outsole</span>
+        <h3>Carbon rubber pods</h3>
+        <p>Rubber sits only where runners land: the lateral heel and under the forefoot. The 3 mm lugs grip wet asphalt, and leaving foam bare between them saves 30 g per shoe.</p>
+        <ul class="chips"><li>Lug depth 3 mm</li><li>68 Shore A</li><li>−30 g vs full coverage</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="lineup">
+    <div class="section-head">
+      <h2>The Vela family</h2>
+      <p>Same last, same fit. Pick by the run you do most.</p>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="wrap section" id="fit">
+    <div class="fit">
+      <div class="fit-notes">
+        <h2>Fit</h2>
+        <p>Vela 2 runs true to size with a standard-width toe box. Measure your foot from heel to longest toe in the evening, when it is largest.</p>
+        <p>Between sizes? Go up for long runs, where feet swell by up to half a size.</p>
+      </div>
+      <div class="table-scroll">
+        <table id="sizeTable">
+          <caption class="sr">Vela size conversion</caption>
+          <tbody>
+            <tr><th scope="row">EU</th></tr>
+            <tr><th scope="row">UK</th></tr>
+            <tr><th scope="row">US M</th></tr>
+            <tr><th scope="row">Foot cm</th></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b class="mark-sm">OVRA</b> Running Co. · concept storefront</span>
+    <span>Free returns within 60 days, run in or not.</span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>Your bag</h2>
+    <button class="icon-btn" id="closeBag" type="button" aria-label="Close bag">✕</button>
+  </div>
+  <div class="ship">
+    <p id="shipMsg"></p>
+    <div class="ship-bar"><span id="shipFill"></span></div>
+  </div>
+  <ul class="lines" id="lines"></ul>
+  <p class="empty" id="empty">Your bag is empty. The Vela 2 is a good place to start.</p>
+  <div class="drawer-foot">
+    <div class="total"><span>Subtotal</span><b id="subtotal">€0</b></div>
+    <button class="cta wide" id="checkout" type="button">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/shoe.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
